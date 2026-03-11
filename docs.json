@@ -1,17 +1,14 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "palm",
   "name": "Linkana Design System",
   "colors": {
     "primary": "#18E299",
     "light": "#18E299",
     "dark": "#0C8C5E"
   },
-  "favicon": "/favicon.svg",
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+  "favicon": "/images/logo.png",
+  "logo": "/images/logo.png",
   "navbar": {
     "links": [
       {
