@@ -1,97 +1,50 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Linkana Design System"
+description: "Componentes, tokens e padrões para produtos Linkana. Baseado em shadcn/ui com ruby_ui (Rails)."
 ---
 
-## Setting up
+## Stack
 
-Get your documentation site up and running in minutes.
+Ruby on Rails · Tailwind CSS v4 · ruby_ui · tw-animate-css
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+## Princípios
 
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="Consistência acima de criatividade" icon="layer-group">
+    Prefira componentes existentes a soluções ad-hoc. Se existe um componente para o caso, use-o.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Sem customizações de cor" icon="palette">
+    Nunca adicione cores fora dos tokens definidos. O tema é neutro/acromático — preto, branco e escala de cinzas.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Dark mode sempre" icon="moon">
+    Todos os componentes devem funcionar nos dois temas. O dark mode é ativado pela classe `.dark` no elemento pai.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Semântica primeiro" icon="code">
+    Use o componente correto para o contexto correto. Não use `Button` para navegação — use `Link`.
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## Onde começar
 
-Everything you need to create world-class documentation.
+<CardGroup cols={3}>
+  <Card title="Tokens" icon="sliders" href="/tokens/colors">
+    Cores, tipografia, espaçamento e border-radius.
+  </Card>
+  <Card title="Componentes" icon="puzzle-piece" href="/components/button">
+    49 componentes documentados com regras de uso e exemplos.
+  </Card>
+  <Card title="Padrões" icon="rectangle-list" href="/patterns/forms">
+    Estruturas recorrentes como formulários.
+  </Card>
+</CardGroup>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+## Cores com matiz
 
-## Need inspiration?
+O tema da Linkana é acromático. Cores com matiz aparecem **apenas** em contextos funcionais:
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+| Cor | Token | Uso |
+|-----|-------|-----|
+| Vermelho | `destructive` | Erros, ações irreversíveis |
+| Âmbar | `warning` | Alertas de atenção |
+| Verde | `success` | Confirmações, sucesso |
+| Variado | `chart-1` a `chart-5` | Visualizações de dados |

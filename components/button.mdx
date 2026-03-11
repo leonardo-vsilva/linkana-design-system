@@ -1,0 +1,74 @@
+---
+title: "Button"
+description: "Elemento de ação primária. Dispara uma ação quando clicado — submit de form, abertura de modal, execução de operação."
+---
+
+## Variantes
+
+<div style={{padding: '24px', background: '#fafafa', border: '1px solid #e5e5e5', borderRadius: '8px', display: 'flex', flexWrap: 'wrap', gap: '8px', alignItems: 'center'}}>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: '#1a1a1a', color: '#fafafa', border: 'none', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>Default</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: '#f5f5f5', color: '#1a1a1a', border: 'none', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>Secondary</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: '#dc2626', color: '#fff', border: 'none', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>Destructive</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: 'transparent', color: '#1a1a1a', border: '1px solid #e5e5e5', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>Outline</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: 'transparent', color: '#1a1a1a', border: 'none', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>Ghost</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: 'transparent', color: '#1a1a1a', border: 'none', fontSize: '14px', fontWeight: 500, cursor: 'pointer', textDecoration: 'underline', textUnderlineOffset: '4px', fontFamily: 'inherit'}}>Link</button>
+</div>
+
+| Variante | Uso |
+|----------|-----|
+| `default` | Ação primária da página |
+| `secondary` | Ação secundária |
+| `destructive` | Ação irreversível (deletar, remover) |
+| `outline` | Ação terciária com borda visível |
+| `ghost` | Ação discreta, geralmente em toolbars |
+| `link` | Ação que parece link de texto |
+
+## Tamanhos
+
+<div style={{padding: '24px', background: '#fafafa', border: '1px solid #e5e5e5', borderRadius: '8px', display: 'flex', flexWrap: 'wrap', gap: '8px', alignItems: 'center'}}>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '40px', padding: '0 32px', background: '#1a1a1a', color: '#fafafa', border: 'none', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>lg</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: '#1a1a1a', color: '#fafafa', border: 'none', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>default</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '32px', padding: '0 12px', background: '#1a1a1a', color: '#fafafa', border: 'none', borderRadius: '6px', fontSize: '12px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>sm</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', width: '36px', background: '#1a1a1a', color: '#fafafa', border: 'none', borderRadius: '6px', fontSize: '16px', cursor: 'pointer', fontFamily: 'inherit'}}>✕</button>
+</div>
+
+| Size | Altura | Uso |
+|------|--------|-----|
+| `lg` | 40px | CTAs de destaque, páginas de onboarding |
+| `default` | 36px | Tamanho padrão para a maioria dos contextos |
+| `sm` | 32px | Contextos compactos (toolbars, tabelas) |
+| `icon` | 36×36px | Botão apenas com ícone (quadrado) |
+
+## Quando usar / quando NÃO usar
+
+- ✅ Ações: salvar, confirmar, enviar, criar, deletar
+- ✅ Abertura de modais, drawers, dialogs
+- ❌ Navegação entre páginas — use link (`<a>`) ou Link component
+- ❌ Ações secundárias de baixa importância — considere `ghost` ou `link` variant
+
+## Regras
+
+- ✅ Máximo de 1 botão `default` (primário) por seção/modal.
+- ✅ Botões destrutivos sempre pedem confirmação via `AlertDialog` antes de executar.
+- ✅ Use `size="icon"` com `aria-label` descritivo quando o botão contiver apenas ícone.
+- ✅ Estado de loading: desabilite o botão e adicione spinner + texto "Carregando...".
+- ❌ Não use `default` variant para ações secundárias.
+- ❌ Não misture mais de 2 variantes diferentes num mesmo grupo de ações.
+
+## Exemplos
+
+✅ Correto — ação primária + secundária:
+```erb
+<%= render RubyUI::Button.new(variant: :default) { "Salvar" } %>
+<%= render RubyUI::Button.new(variant: :outline) { "Cancelar" } %>
+```
+
+✅ Correto — ação destrutiva:
+```erb
+<%= render RubyUI::Button.new(variant: :destructive) { "Excluir fornecedor" } %>
+```
+
+❌ Errado — usar Button para navegação:
+```erb
+<%= render RubyUI::Button.new(href: "/suppliers") { "Ver fornecedores" } %>
+```

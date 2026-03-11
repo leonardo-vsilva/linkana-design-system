@@ -1,88 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Linkana Design System",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#18E299",
+    "light": "#18E299",
+    "dark": "#0C8C5E"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
@@ -90,33 +15,94 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "linkana.com.br",
+        "href": "https://linkana.com.br"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
+    ]
   },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Design System",
+        "groups": [
+          {
+            "group": "Início",
+            "pages": ["index"]
+          },
+          {
+            "group": "Tokens",
+            "pages": [
+              "tokens/colors",
+              "tokens/typography",
+              "tokens/radius",
+              "tokens/spacing"
+            ]
+          },
+          {
+            "group": "Componentes",
+            "pages": [
+              "components/accordion",
+              "components/alert",
+              "components/alert-dialog",
+              "components/aspect-ratio",
+              "components/avatar",
+              "components/badge",
+              "components/breadcrumb",
+              "components/button",
+              "components/calendar",
+              "components/card",
+              "components/carousel",
+              "components/chart",
+              "components/checkbox",
+              "components/collapsible",
+              "components/combobox",
+              "components/command",
+              "components/context-menu",
+              "components/data-table",
+              "components/date-picker",
+              "components/dialog",
+              "components/drawer",
+              "components/dropdown-menu",
+              "components/form",
+              "components/hover-card",
+              "components/input",
+              "components/input-otp",
+              "components/label",
+              "components/menubar",
+              "components/navigation-menu",
+              "components/pagination",
+              "components/popover",
+              "components/progress",
+              "components/radio-group",
+              "components/resizable",
+              "components/scroll-area",
+              "components/select",
+              "components/separator",
+              "components/sheet",
+              "components/sidebar",
+              "components/skeleton",
+              "components/slider",
+              "components/sonner",
+              "components/switch",
+              "components/table",
+              "components/tabs",
+              "components/textarea",
+              "components/toggle",
+              "components/toggle-group",
+              "components/tooltip"
+            ]
+          },
+          {
+            "group": "Padrões",
+            "pages": ["patterns/forms"]
+          }
+        ]
+      }
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://linkedin.com/company/linkana"
     }
   }
 }
