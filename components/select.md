@@ -1,5 +1,3 @@
-# Select
-
 ## O que é
 Dropdown de seleção nativo estilizado. Permite escolher uma opção de uma lista fechada e conhecida.
 

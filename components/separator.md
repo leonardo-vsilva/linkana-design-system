@@ -1,5 +1,3 @@
-# Separator
-
 ## O que é
 Divisor visual horizontal ou vertical para separar grupos de conteúdo relacionado.
 

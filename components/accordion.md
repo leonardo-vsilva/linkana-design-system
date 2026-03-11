@@ -1,5 +1,3 @@
-# Accordion
-
 ## O que é?
 
 Lista de seções expansíveis/colapsáveis. Cada item pode ser aberto individualmente para revelar conteúdo.

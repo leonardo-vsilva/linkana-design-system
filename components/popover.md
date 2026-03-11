@@ -1,5 +1,3 @@
-# Popover
-
 ## O que é
 Painel flutuante ancorado a um trigger. Similar ao Tooltip mas pode conter conteúdo interativo.
 

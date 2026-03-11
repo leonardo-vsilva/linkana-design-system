@@ -1,5 +1,3 @@
-# Table
-
 ## O que é
 Componente de tabela estilizado para exibição de dados estruturados em linhas e colunas.
 

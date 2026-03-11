@@ -1,5 +1,3 @@
-# Alert Dialog
-
 ## O que é
 Modal de confirmação bloqueante para ações irreversíveis ou de alto impacto. Diferente do `Dialog`, ele não pode ser fechado clicando fora.
 

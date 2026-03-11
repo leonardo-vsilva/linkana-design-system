@@ -1,5 +1,3 @@
-# Resizable
-
 ## O que é
 Painéis com divisor arrastável que permite ao usuário redimensionar as seções horizontalmente ou verticalmente.
 

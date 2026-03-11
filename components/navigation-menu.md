@@ -1,5 +1,3 @@
-# Navigation Menu
-
 ## O que é
 Menu de navegação horizontal com suporte a submenus e conteúdo rico. Para navegação principal em páginas públicas/marketing.
 

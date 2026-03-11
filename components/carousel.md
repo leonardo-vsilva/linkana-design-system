@@ -1,5 +1,3 @@
-# Carousel
-
 ## O que é
 Container de conteúdo deslizável em série (slides). Para navegar entre múltiplos itens de forma sequencial.
 

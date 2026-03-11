@@ -1,5 +1,3 @@
-# Tooltip
-
 ## O que é
 Texto auxiliar que aparece ao passar o mouse sobre um elemento. Fornece contexto adicional sem ocupar espaço permanente.
 

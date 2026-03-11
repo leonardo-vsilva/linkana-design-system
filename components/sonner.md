@@ -1,5 +1,3 @@
-# Sonner (Toast)
-
 ## O que é
 Notificações temporárias flutuantes de feedback de ação. Aparecem automaticamente e somem após alguns segundos.
 

@@ -1,5 +1,3 @@
-# Breadcrumb
-
 ## O que é
 Trilha de navegação que mostra o caminho hierárquico até a página atual.
 

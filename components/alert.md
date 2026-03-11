@@ -1,5 +1,3 @@
-# Alert
-
 ## O que é
 Componente inline de feedback contextual. Exibe mensagens de status, avisos ou erros diretamente no conteúdo da página.
 

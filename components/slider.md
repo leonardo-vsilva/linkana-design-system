@@ -1,5 +1,3 @@
-# Slider
-
 ## O que é
 Controle deslizante para seleção de valor numérico dentro de um range.
 

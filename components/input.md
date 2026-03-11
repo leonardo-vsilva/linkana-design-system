@@ -1,5 +1,3 @@
-# Input
-
 ## O que é
 Campo de entrada de texto de linha única. Usado em formulários para dados como nome, email, busca, etc.
 

@@ -1,5 +1,3 @@
-# Sheet
-
 ## O que é
 Painel lateral deslizante (drawer lateral) que aparece sobre o conteúdo sem substituir a página. Variante do Dialog que vem de uma das bordas da tela.
 

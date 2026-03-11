@@ -1,5 +1,3 @@
-# Skeleton
-
 ## O que é
 Placeholder animado que representa o formato do conteúdo durante o carregamento. Melhora a percepção de performance.
 

@@ -1,5 +1,3 @@
-# Hover Card
-
 ## O que é
 Card flutuante com informações detalhadas que aparece ao passar o mouse sobre um elemento. Para conteúdo mais rico que um Tooltip.
 

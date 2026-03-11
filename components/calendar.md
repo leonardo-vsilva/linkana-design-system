@@ -1,5 +1,3 @@
-# Calendar
-
 ## O que é
 Componente de calendário visual para seleção de datas. Geralmente usado como parte do `DatePicker`.
 

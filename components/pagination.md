@@ -1,5 +1,3 @@
-# Pagination
-
 ## O que é
 Controle de navegação entre páginas de um conjunto de dados paginado.
 

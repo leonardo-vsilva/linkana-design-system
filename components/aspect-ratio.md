@@ -1,5 +1,3 @@
-# Aspect Ratio
-
 ## O que é
 Container que mantém a proporção de aspecto de seu conteúdo (ex: 16:9, 4:3, 1:1).
 

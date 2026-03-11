@@ -1,5 +1,3 @@
-# Dropdown Menu
-
 ## O que é
 Menu flutuante de ações contextuais que abre a partir de um trigger (geralmente um botão). Agrupa múltiplas ações secundárias sem ocupar espaço permanente na interface.
 

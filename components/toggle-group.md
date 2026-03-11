@@ -1,5 +1,3 @@
-# Toggle Group
-
 ## O que é
 Grupo de Toggles relacionados. Permite seleção única ou múltipla dentro de um conjunto de opções.
 

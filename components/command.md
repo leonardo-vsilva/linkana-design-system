@@ -1,5 +1,3 @@
-# Command
-
 ## O que é
 Palette de comando com busca integrada. Interface de busca/navegação rápida por teclado.
 

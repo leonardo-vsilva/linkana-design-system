@@ -1,5 +1,3 @@
-# Collapsible
-
 ## O que é
 Seção expansível/colapsável simples. Versão primitiva e sem estilo do Accordion — para um único item.
 

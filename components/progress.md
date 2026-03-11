@@ -1,5 +1,3 @@
-# Progress
-
 ## O que é
 Barra de progresso que indica o avanço de uma operação ou preenchimento de um processo.
 

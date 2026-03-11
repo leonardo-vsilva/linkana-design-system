@@ -1,5 +1,3 @@
-# Badge
-
 ## O que é
 Etiqueta visual compacta para indicar status, categoria ou contagem. Não é interativa.
 

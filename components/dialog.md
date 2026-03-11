@@ -1,5 +1,3 @@
-# Dialog
-
 ## O que é
 Modal que aparece sobre o conteúdo principal para capturar atenção em ações que requerem foco ou confirmação.
 

@@ -1,5 +1,3 @@
-# Textarea
-
 ## O que é
 Campo de entrada de texto multi-linha para conteúdo textual longo.
 

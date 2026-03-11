@@ -1,5 +1,3 @@
-# Label
-
 ## O que é
 Texto de rótulo associado a um campo de formulário. Essencial para acessibilidade e usabilidade.
 

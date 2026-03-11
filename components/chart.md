@@ -1,5 +1,3 @@
-# Chart
-
 ## O que é
 Componentes de visualização de dados baseados em Recharts. Inclui Line Chart, Bar Chart, Area Chart, Pie Chart, Radar Chart.
 

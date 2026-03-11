@@ -1,5 +1,3 @@
-# Input OTP
-
 ## O que é
 Campo de entrada para código OTP (One-Time Password) de múltiplos dígitos separados visualmente.
 

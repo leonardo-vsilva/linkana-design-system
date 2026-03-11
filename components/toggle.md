@@ -1,5 +1,3 @@
-# Toggle
-
 ## O que é
 Botão com dois estados (pressionado/não pressionado). Visualmente indica seleção ativa.
 

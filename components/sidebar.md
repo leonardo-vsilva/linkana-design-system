@@ -1,5 +1,3 @@
-# Sidebar
-
 ## O que é
 Painel de navegação lateral principal da aplicação. Contém links de navegação, logo e ações de usuário.
 

@@ -1,5 +1,3 @@
-# Menubar
-
 ## O que é
 Barra de menus horizontal estilo desktop (File, Edit, View...). Navegação por menus em cascata.
 

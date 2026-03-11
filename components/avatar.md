@@ -1,5 +1,3 @@
-# Avatar
-
 ## O que é
 Representação visual de um usuário ou entidade, geralmente com foto ou iniciais como fallback.
 

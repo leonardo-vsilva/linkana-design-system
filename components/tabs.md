@@ -1,5 +1,3 @@
-# Tabs
-
 ## O que é
 Navegação por abas para alternar entre seções de conteúdo relacionado dentro da mesma página ou contexto.
 

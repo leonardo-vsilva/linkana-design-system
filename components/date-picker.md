@@ -1,5 +1,3 @@
-# Date Picker
-
 ## O que é
 Campo de seleção de data que combina `Button` + `Popover` + `Calendar`. Padrão de seleção de data na Linkana.
 

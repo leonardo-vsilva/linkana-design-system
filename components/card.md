@@ -1,5 +1,3 @@
-# Card
-
 ## O que é
 Container visual com borda e fundo para agrupar conteúdo relacionado. Unidade básica de layout de conteúdo.
 

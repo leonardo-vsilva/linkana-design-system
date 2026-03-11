@@ -1,5 +1,3 @@
-# Switch
-
 ## O que é
 Toggle visual de estado binário (ativo/inativo). Visualmente representa um interruptor — ação imediata ao clicar, sem necessidade de submit.
 

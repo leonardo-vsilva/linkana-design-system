@@ -1,5 +1,3 @@
-# Checkbox
-
 ## O que é
 Controle de seleção binária (marcado/desmarcado). Usado para opções independentes ou múltipla seleção de uma lista.
 

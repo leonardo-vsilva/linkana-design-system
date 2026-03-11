@@ -1,5 +1,3 @@
-# Scroll Area
-
 ## O que é
 Container com scroll customizado e estilizado, substituindo o scroll nativo do browser.
 

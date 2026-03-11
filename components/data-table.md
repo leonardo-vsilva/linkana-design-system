@@ -1,5 +1,3 @@
-# Data Table
-
 ## O que é
 Tabela avançada com suporte a ordenação, filtro, paginação e seleção de linhas. Construída sobre o componente `Table`.
 

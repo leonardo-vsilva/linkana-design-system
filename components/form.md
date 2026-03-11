@@ -1,5 +1,3 @@
-# Form
-
 ## O que é
 Componente de formulário com validação integrada via biblioteca de formulários (ex: Stimulus + validação server-side ou client-side). Composto por `FormField`, `FormItem`, `FormLabel`, `FormControl`, `FormDescription`, e `FormMessage`.
 

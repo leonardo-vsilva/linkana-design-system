@@ -1,5 +1,3 @@
-# Context Menu
-
 ## O que é
 Menu que aparece ao clicar com o botão direito sobre um elemento. Ações contextuais para o item clicado.
 

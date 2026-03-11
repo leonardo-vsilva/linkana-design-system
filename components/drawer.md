@@ -1,5 +1,3 @@
-# Drawer
-
 ## O que é
 Painel deslizante otimizado para mobile. Abre a partir da borda inferior da tela (padrão) com gesto de arrastar para fechar.
 

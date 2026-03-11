@@ -1,5 +1,3 @@
-# Radio Group
-
 ## O que é
 Grupo de opções mutuamente exclusivas. O usuário pode selecionar apenas uma.
 

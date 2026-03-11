@@ -1,5 +1,3 @@
-# Combobox
-
 ## O que é
 Campo de seleção com busca integrada. Combina `Popover` + `Command` para permitir filtrar e selecionar itens de uma lista.
 
