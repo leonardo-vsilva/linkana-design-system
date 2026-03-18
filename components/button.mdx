@@ -199,7 +199,8 @@ Nunca use `size="icon"` em CTAs primários. O usuário precisa entender a ação
 
 ## Regras
 
-- ✅ Máximo de 1 botão `default` (primário) por grupo de ações.
+- ✅ Máximo de 1 botão `default` (primário) por página.
+- ✅ Máximo de 2 botões por linha de ações — use DropdownMenu para o excedente.
 - ✅ Ordem em grupos de decisão: `outline` (esq) → `secondary` (centro) → `default` (dir).
 - ✅ `outline` para ações secundárias visíveis: cancelar, editar, filtros avançados, exportar.
 - ✅ `ghost` para ações mínimas: ícones de hover, ações em contextos muito densos.
@@ -209,7 +210,54 @@ Nunca use `size="icon"` em CTAs primários. O usuário precisa entender a ação
 - ❌ Não use `default` variant para ações secundárias.
 - ❌ Não coloque o botão `default` à esquerda de outros botões.
 - ❌ Não use `ghost` para ações que o usuário precisa descobrir sem passar o mouse — use `outline`.
-- ❌ Não use mais de 3 botões no grupo de decisão da mesma linha — consolide em dropdown.
+- ❌ Não use mais de 2 botões visíveis na mesma linha — consolide os excedentes em dropdown.
+
+## Hierarquia em linhas de ação
+
+### 1 Default por página
+
+Cada tela deve ter **no máximo um botão `default`** (filled/preto). Ele representa a ação principal e concentra a atenção do usuário. Modais e dialogs isolados podem ter seu próprio `default` sem conflitar com o da página.
+
+### Máximo 2 botões por linha
+
+Quando uma linha de ações teria 3 ou mais botões, agrupe os secundários em um `DropdownMenu` com trigger `•••`. O botão `default` nunca vai para o dropdown — sempre fica visível.
+
+```erb
+<%# ✅ Correto — CTA visível + secundária visível + excedentes no dropdown %>
+<%= render RubyUI::Button.new(variant: :default) { "Incluir novos" } %>
+<%= render RubyUI::Button.new(variant: :outline) { "Exportar" } %>
+
+<%= render RubyUI::DropdownMenu.new do %>
+  <%= render RubyUI::DropdownMenuTrigger.new do %>
+    <%= render RubyUI::Button.new(variant: :outline, size: :icon) do %>
+      <%= lucide_icon "ellipsis", class: "size-4" %>
+    <% end %>
+  <% end %>
+  <%= render RubyUI::DropdownMenuContent.new(align: "end") do %>
+    <%= render RubyUI::DropdownMenuItem.new { "Histórico" } %>
+    <%= render RubyUI::DropdownMenuSeparator.new %>
+    <%= render RubyUI::DropdownMenuItem.new(class: "text-destructive focus:text-destructive") { "Excluir todos" } %>
+  <% end %>
+<% end %>
+```
+
+### Destructive ao lado de Default
+
+Quando um botão destrutivo coexiste na mesma linha com um `default`, **não use o `destructive` filled** (vermelho sólido) — ele compete visualmente com o `default`. Use a variante **outline destrutiva** em vez disso:
+
+```erb
+<%# ✅ Correto — destructive como outline quando há um default na mesma linha %>
+<%= render RubyUI::Button.new(variant: :default) { "Salvar" } %>
+<%= render RubyUI::Button.new(variant: :outline, class: "border-destructive text-destructive hover:bg-destructive/10") { "Excluir" } %>
+```
+
+```erb
+<%# ❌ Errado — dois botões de destaque competindo na mesma linha %>
+<%= render RubyUI::Button.new(variant: :default) { "Salvar" } %>
+<%= render RubyUI::Button.new(variant: :destructive) { "Excluir" } %>
+```
+
+O `destructive` filled é reservado para quando é a **única ação de destaque** da tela (ex: página de confirmação de exclusão) ou está isolado dentro de um DropdownMenu.
 
 ## Exemplos
 
@@ -251,6 +299,19 @@ Nunca use `size="icon"` em CTAs primários. O usuário precisa entender a ação
 ```erb
 <%= render RubyUI::Button.new(variant: :outline) { "Cancelar" } %>
 <%= render RubyUI::Button.new(variant: :destructive) { "Excluir fornecedor" } %>
+```
+
+✅ Correto — destrutiva ao lado de primária (outline destrutivo)
+
+<div style={{padding: '24px', background: '#fafafa', border: '1px solid #e5e5e5', borderRadius: '8px', display: 'flex', gap: '8px', alignItems: 'center'}}>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: 'transparent', color: '#dc2626', border: '1px solid #dc2626', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>Excluir</button>
+  <button style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '36px', padding: '0 16px', background: '#1a1a1a', color: '#fafafa', border: 'none', borderRadius: '6px', fontSize: '14px', fontWeight: 500, cursor: 'pointer', fontFamily: 'inherit'}}>Confirmar</button>
+</div>
+
+```erb
+<%# ✅ Destructive como outline quando há um default na mesma linha %>
+<%= render RubyUI::Button.new(variant: :outline, class: "border-destructive text-destructive hover:bg-destructive/10") { "Excluir" } %>
+<%= render RubyUI::Button.new(variant: :default) { "Confirmar" } %>
 ```
 
 ❌ Dois primários concorrendo — nenhum é o principal
