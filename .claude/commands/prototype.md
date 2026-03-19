@@ -47,7 +47,11 @@ Para cada tela identificada, defina:
 }
 ```
 
-Apresente a lista de telas ao usuário e **aguarde confirmação ou ajustes** antes de gerar.
+Apresente a lista de telas ao usuário e **pergunte qual delas deseja prototipar agora**, exibindo a lista numerada:
+
+> "Quais dessas telas você quer prototipar? Informe o número ou nome da tela."
+
+**Aguarde a resposta do usuário.** Gere apenas a tela escolhida — uma por execução.
 
 ---
 
@@ -102,9 +106,9 @@ uma versão em cache ou inline.
 
 ---
 
-## Passo 6 — Gerar as telas
+## Passo 6 — Gerar a tela selecionada
 
-Para **cada tela** identificada, chame `generate_screen_from_text` com o seguinte prompt:
+Chame `generate_screen_from_text` para a **tela escolhida pelo usuário** com o seguinte prompt:
 
 ```
 [DESIGN SYSTEM CONTEXT]
@@ -124,23 +128,13 @@ e espaçamento definidos. Sem cores, fontes ou componentes customizados fora do 
 A tela deve ser funcional, densa em informação e profissional — não decorativa.
 ```
 
-**Após a primeira tela gerada:**
-- Use `extract_design_context` na tela gerada para capturar o "Design DNA" real
-- Use esse DNA como contexto adicional nas telas seguintes para garantir consistência visual
-
-**Ordem de geração recomendada:**
-1. Telas de configuração/admin (mais simples, estabelecem o padrão)
-2. Telas de preenchimento/formulário (fornecedor)
-3. Telas de revisão/detalhes (buyer)
-4. Estados de erro e edge cases
-
-**Se uma tela falhar:** tente novamente com uma descrição mais detalhada. Após 2 tentativas sem sucesso, pule e sinalize ao usuário.
+**Se a tela falhar:** tente novamente com uma descrição mais detalhada. Após 2 tentativas sem sucesso, sinalize ao usuário.
 
 ---
 
 ## Passo 7 — Capturar e apresentar resultado
 
-Para cada tela gerada com sucesso, use `fetch_screen_image` para obter o screenshot.
+Use `fetch_screen_image` para obter o screenshot da tela gerada.
 
 Apresente o resultado no formato:
 
@@ -149,27 +143,18 @@ Apresente o resultado no formato:
 PROTÓTIPO GERADO: [Nome do Projeto]
 ══════════════════════════════════════════════════════════
 
-Telas geradas: [N]/[Total]
-
-[Screenshot da tela 1]
-📱 Tela 01 — [Nome]
-   Ator: [buyer/fornecedor]
-   [link para a tela no Stitch, se disponível]
-
-[Screenshot da tela 2]
-📱 Tela 02 — [Nome]
-   ...
-
-──────────────────────────────────────────────────────────
-TELAS NÃO GERADAS (requerem atenção manual):
-→ [Nome da tela] — Motivo: [erro/timeout/etc]
+[Screenshot da tela]
+Tela — [Nome]
+Ator: [buyer/fornecedor]
+[link para a tela no Stitch, se disponível]
 
 ══════════════════════════════════════════════════════════
 ```
 
 Ao final, ofereça:
-- Iterar em telas específicas com mais detalhamento
-- Rodar `/design-check` nas telas geradas
+- Iterar nessa tela com mais detalhamento
+- Prototipar outra tela da lista (exiba a lista novamente)
+- Rodar `/design-check` na tela gerada
 - Rodar `/linear-check` para verificar cobertura dos critérios de aceite
 
 ---
