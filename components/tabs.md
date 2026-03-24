@@ -7,6 +7,18 @@ Navegação por abas para alternar entre seções de conteúdo relacionado dentr
 - ❌ Navegação entre páginas diferentes — use links ou nav
 - ❌ Mais de 6 abas — considere outra estrutura de navegação
 - ❌ Conteúdos que devem ser vistos juntos — use seções na página
+- ❌ Formulários com campos dependentes de seleção — use exibição condicional inline (ver abaixo)
+
+### Tabs em formulários (não usar)
+
+Evite usar abas como mecanismo de seleção dentro de formulários para expor campos dependentes de uma escolha do usuário (ex: tipo de fornecedor determinando quais campos aparecem).
+
+Essa abordagem apresenta dois problemas:
+
+1. **Usuários ignoram abas em formulários.** O fluxo natural de preenchimento é de cima para baixo. Abas horizontais saem desse caminho e costumam passar despercebidas.
+2. **Comportamento ambíguo.** Não fica claro se as abas são mutuamente exclusivas. O usuário não sabe se o formulário vai enviar apenas os campos da aba ativa ou os de todas as abas preenchidas.
+
+**Alternativa recomendada:** exibição condicional inline — mostre e oculte os campos diretamente na página conforme a seleção do usuário, sem mudar de aba ou de página.
 
 ## Estrutura de composição
 
