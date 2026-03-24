@@ -37,26 +37,46 @@ Dark mode supported via `.dark` CSS class.
 
 ## 3. Typography Rules
 
-Font family: System UI stack — Inter, -apple-system, BlinkMacSystemFont, sans-serif.
-No custom web fonts. No decorative typefaces.
+Font family: Inter, -apple-system, BlinkMacSystemFont, sans-serif.
+Inter is declared explicitly — system fonts vary across OS (Segoe UI on Windows),
+Inter ensures visual consistency. No other custom or decorative typefaces.
 
-Size scale (use only these values):
-- 12px — Auxiliary labels, badge text, metadata, timestamps
-- 14px — Standard UI body, form labels, table cells, button text
-- 16px — Running text, field descriptions, section body
-- 18px — Minor section headings
-- 20px — Card titles, panel headings
-- 24px — Page titles
-- 30px — Maximum heading size (used sparingly for top-level headings)
+Size scale (use only these four values):
+- 12px — Metadata, timestamps, counters, badge text, keyboard shortcuts
+- 14px — Universal default: body, labels, descriptions, table cells, button text
+- 20px — Section headings, card titles, panel headings
+- 24px — Page title only — one per screen
+
+Removed from scale: 16px, 18px, 30px. Hierarchy within body text is achieved
+through weight and color, not size variation.
 
 Weight hierarchy:
-- 400 Regular — Body copy, table data, description text
-- 500 Medium — Labels, navigation items, button text, column headers
-- 600 Semibold — Card titles, form section headings, sidebar group labels
-- 700 Bold — Page-level headings, primary titles
+- 400 Regular — Default for all non-actionable content: body, descriptions,
+  display values, helper text, table data
+- 500 Medium — Interactive and navigational elements: form labels, buttons,
+  nav items, column headers, active states
+- 600 Semibold — All headings: card titles, section titles, page titles
 
-No italic for UI elements. Letter spacing: default. Line height: snug (1.25) for
-headings, relaxed (1.5) for body copy.
+700 Bold is not part of the system.
+
+Letter spacing:
+- Body (≤ 14px): default (0)
+- Headings (20px, 24px): -0.01em (tracking-tight)
+
+Line height:
+- Body and labels (≤ 14px): 1.5
+- Single-line headings (20px+): 1.25
+
+Text color hierarchy — muted-foreground is the DEFAULT, foreground is the exception:
+- text-foreground — Active / primary: titles, key values, selected items, inline CTAs
+- text-muted-foreground — Support: body text, secondary labels, descriptions,
+  helper text, display values
+- text-muted-foreground/60 — Tertiary: timestamps, counters, metadata,
+  keyboard shortcuts
+
+No italic for UI elements. Maximum 2 font sizes simultaneously in utility screens
+(sidebar, table, form): text-xs and text-sm. text-xl and text-2xl are exclusive
+to headings.
 
 ---
 
